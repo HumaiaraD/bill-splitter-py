@@ -9,6 +9,7 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 @app.route("/calculate", methods=["POST", "OPTIONS"])
+@app.route("/calculate/", methods=["POST", "OPTIONS"])
 def calculate():
     if request.method == "OPTIONS":
         return jsonify({"status": "OK"}), 200
@@ -25,7 +26,7 @@ def calculate():
 
 @app.route("/")
 def home():
-    return "Backend is working!"
+    return "Bill Calculator Backend is working!"
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
