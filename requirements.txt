@@ -5,6 +5,9 @@ pandas>=2.1.0
 scikit-learn>=1.7.2
 statsmodels>=0.14.5
 
+# Core web framework
+Flask>=2.3.3
+
 # Build-time dependency for pmdarima
 Cython>=0.29
 
